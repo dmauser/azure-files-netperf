@@ -18,7 +18,7 @@ In this case scenario, the customer reports that when copying files from On-Prem
     -   On-Prem VM Client (Windows) - 10.20.2.6
 -   S2S IPSec VPN between On-Prem and Azure.
 -   Azure VNET (10.100.0.0/24) - on Central US region
-    -   Windows Server VM - 10.100.0.5
+    -   Windows Server 2016 VM - 10.100.0.5
     -   Azure Files Private Endpoint - 10.100.0.9 mapped to Standard
         Storage Account in Central US region.
 -  Robocopy /MT (multithread) and file with 1GB of size. (**Note:** never use Explorer for file copy because it uses SMB single thread/channel) 
@@ -70,7 +70,7 @@ The copy process confirms that the establishment of four TCP conversations. That
 
 ![](.//media/image9.jpeg)
 
-A simple way to verify if SMB Multichannel is active is to run the PowerShell command Get-SmbMultichannelConnection | fl on client-side and we have the confirmation it is active and using four channels to Windows IaaS VM (10.100.0.5), as shown:
+A simple way to verify if SMB Multichannel is active is to run the PowerShell command **Get-SmbMultichannelConnection | fl** on client-side and we have the confirmation it is active and using four channels to Windows IaaS VM (10.100.0.5), as shown:
 
 ![](.//media/image8.jpeg)
 
