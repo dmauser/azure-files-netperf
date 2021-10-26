@@ -86,9 +86,12 @@ Files require Premium SKU as well as is currently in preview and limited today t
 Microsoft
 Docs](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-smb-multichannel-performance)
 
-Also, note that the Azure Files multichannel feature has limited support to Private Endpoints at this time, as shown: 
+
+Also, note that the Azure Files multichannel feature has limited support to Private Endpoints at this time, as shown:
 
 ![](.//media/image10.png)
+
+**Update: Oct/2021** - Limitation  for the multichannel against private link has been removed accessing the same link above.
 
 ### Consideration on Storage Premium SKU 
 
